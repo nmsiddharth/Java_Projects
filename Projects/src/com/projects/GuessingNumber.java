@@ -3,7 +3,7 @@ package com.projects;
 import java.util.Random;
 import java.util.Scanner;
 
-public class MiniProject {
+public class GuessingNumber {
 
 	public static int Random() {
 		Random rand = new Random();
@@ -45,7 +45,7 @@ public class MiniProject {
 	
 		
 		
-		MiniProject.check();
+		GuessingNumber.check();
 		
 
 	}
