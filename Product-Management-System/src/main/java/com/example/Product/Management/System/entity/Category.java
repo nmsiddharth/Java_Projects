@@ -2,6 +2,8 @@ package com.example.Product.Management.System.entity;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,6 +24,7 @@ public class Category {
 	private String categoryName;
 	
 	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+	 @JsonIgnoreProperties("category")
 	private List<Product> products;
 
 	public Category() {
@@ -61,10 +64,6 @@ public class Category {
 		this.products = products;
 	}
 
-	@Override
-	public String toString() {
-		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", products=" + products + "]";
-	}
 	
 	
 	

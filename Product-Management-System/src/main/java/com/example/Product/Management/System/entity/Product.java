@@ -1,5 +1,7 @@
 package com.example.Product.Management.System.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +24,7 @@ public class Product {
 	
 	@ManyToOne
 	@JoinColumn(name = "category_id")
+	@JsonIgnoreProperties("products")
 	private Category category;
 
 	public Product() {
@@ -70,11 +73,7 @@ public class Product {
 		this.category = category;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [productId=" + productId + ", productName=" + productName + ", productPrice=" + productPrice
-				+ ", category=" + category + "]";
-	}
+	
 	
 	
 }

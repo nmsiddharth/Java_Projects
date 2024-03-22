@@ -55,10 +55,6 @@ private int categoryId;
 		this.products = products;
 	}
 
-	@Override
-	public String toString() {
-		return "Category [categoryId=" + categoryId + ", categoryName=" + categoryName + ", products=" + products + "]";
-	}
 	
 	
 	
