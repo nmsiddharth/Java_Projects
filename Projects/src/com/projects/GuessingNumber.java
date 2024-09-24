@@ -7,7 +7,7 @@ public class GuessingNumber {
 
 	public static int Random() {
 		Random rand = new Random();
-		int rand_Int = rand.nextInt(10)+1;
+		int rand_Int = rand.nextInt(20)+1;
 		return rand_Int;
 	}
 	
